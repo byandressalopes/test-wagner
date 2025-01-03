@@ -1,0 +1,128 @@
+{
+  "_id": {
+    "$oid": "6777fc6a427b1617756b5510"
+  },
+  "name": "user",
+  "port": 37883,
+  "connector": "loki",
+  "workspaceId": "6777e64c427b1617756b520e",
+  "enabled": true,
+  "created_at": "2025-01-03T15:04:08.077Z",
+  "is_trashed": false,
+  "interceptors": [
+    {
+      "name": "API Request",
+      "description": "Make request to third party applications to enrich your application's payload.",
+      "type": "api",
+      "details": {
+        "method": "GET",
+        "allowed_requests": [
+          {
+            "path": "users",
+            "method": "POST"
+          }
+        ],
+        "mapping": [],
+        "auth": [
+          {
+            "name": "type",
+            "value": "none"
+          }
+        ]
+      }
+    }
+  ],
+  "adapters": [],
+  "listeners": [],
+  "auth": [
+    {
+      "name": "Basic Auth",
+      "type": "basic",
+      "details": {
+        "username": "USERNAME",
+        "password": "PASSWORD"
+      }
+    }
+  ],
+  "metadata": {
+    "adapters": {
+      "position": {
+        "x": 580,
+        "y": 740
+      },
+      "isNodeHidden": false,
+      "items": []
+    },
+    "interceptors": {
+      "position": {
+        "x": 580,
+        "y": 100
+      },
+      "isNodeHidden": false,
+      "items": [
+        {
+          "isNodeHidden": false,
+          "position": {
+            "x": 580,
+            "y": 0
+          },
+          "details": {
+            "url": false,
+            "method": false,
+            "headers": false,
+            "body": false,
+            "on_error": false,
+            "errorMessage": false,
+            "allowed_requests": {
+              "isNodeHidden": false,
+              "undefined": false
+            },
+            "mapping": {
+              "isNodeHidden": false
+            },
+            "auth": {
+              "isNodeHidden": false,
+              "type": false
+            }
+          }
+        }
+      ]
+    },
+    "listeners": {
+      "position": {
+        "x": 580,
+        "y": 0
+      },
+      "isNodeHidden": false,
+      "items": []
+    },
+    "authentication": {
+      "position": {
+        "x": 580,
+        "y": 840
+      },
+      "isNodeHidden": false,
+      "items": [
+        {
+          "isNodeHidden": false,
+          "position": {
+            "x": 580,
+            "y": 0
+          },
+          "details": {
+            "username": false,
+            "password": true,
+            "readOnly": false
+          }
+        }
+      ]
+    }
+  },
+  "user_id": "9bbba9fd-dae0-43e4-a2b1-56c31f0ce883",
+  "_etag": {
+    "$oid": "6777feab427b1617756b5550"
+  },
+  "description": "A lightweight in-memory database for fast and flexible data storage. Ideal for local data management and offline-first applications.",
+  "relationship": false,
+  "updated_at": "2025-01-03T15:13:47.593Z"
+}
