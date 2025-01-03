@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  scimgateway:
+    build: ./scimgateway
+    ports:
+      - "37883:37883"
+    restart: always
+    environment:
+      loki-user_BASIC_0_USERNAME: admin
+      loki-user_BASIC_0_PASSWORD: admin
+      ENABLE_REQUEST_LOGS: true
+      USERNAME: admin
+      PASSWORD: admin
+    volumes:
+      - data:/home/node/app/data
+   
+  
+  
+     
+
+volumes:
+  data:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: ./data
